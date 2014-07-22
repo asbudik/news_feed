@@ -2,7 +2,7 @@ var express = require('express'),
 ejs = require('ejs'),
 bodyParser = require('body-parser'),
 app = express();
-
+require('express-helpers')(app);
 
 var articles = [];
 

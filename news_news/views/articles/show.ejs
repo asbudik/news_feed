@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style media="screen" type="text/css">
+      h1 {
+        position: relative;
+        left: 40px;
+        font-size: 80px;
+        font-family: "Helvetica", sans-serif;
+        }
+        h2 {
+        	font-size: 50px;
+        }
+      button, p, h2 {
+        margin-left: 15px;
+      }
+      .article-div {
+      	margin-left: 30px;
+      }
+      .author {
+      	font-weight: bolder;
+      	font-size: 15px;
+      }
+      .titles {
+      	font-size: 16px;
+      	letter-spacing: .5px;
+      }
+    </style>
   </head>
   <body>
-	<h2><%= article.title %></h2>
-	<p><%= article.author %></p>
-	<p><%= article.description %></p>
+    
+      <h1>The Daily Planet</h1>
+    
+    <div class="container">
+      <a class="navbar-brand" href="/">Home</a>
+
+      <a class="navbar-brand" href="/about">About Us</a>
+      <a class="navbar-brand" href="/contact">Contact Us</a>
+      <a class="navbar-brand" href="/articles">Articles</a>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Article Archive</h3>
+      </div>
+    </div>
+    <div class="article-div">
+	    <h2><%= article.title %></h2>
+			<p class="author"><%= article.author %></p>
+			<p><%= article.description %></p>
+	  </div>
   </body>
 </html>

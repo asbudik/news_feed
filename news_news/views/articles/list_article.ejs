@@ -14,27 +14,9 @@
         font-size: 80px;
         font-family: "Helvetica", sans-serif;
         }
-      a {
-        position: relative;
-        left: -100px;
-      }
-      form {
-        position: absolute;
-        width: 500px;
-        top: 220px;
-      }
-      input{
-        padding: 4px;
-        width: 300px;
-        margin: 10px;
-      }
-      textarea {
-        margin-left: 10px;
-        width: 600px;
-        height: 200px;
-      }
-      button, p, h2 {
-        margin-left: 15px;
+      .titles {
+      	font-size: 16px;
+      	letter-spacing: .5px;
       }
     </style>
   </head>
@@ -57,7 +39,8 @@
     
     <ul>
       <% articles.forEach(function(article, index) { %>
-        <li><a action="/articles/" href="/articles/"><%= article.title %></a></li>
+        <!-- <li><a href="/articles/<%= index %>"><%= article.title %></a></li> -->
+       <li class="titles"><%- link_to(article.title, '/articles/' + index) %></li>
       <% }) %>
     </ul>
   </body>
