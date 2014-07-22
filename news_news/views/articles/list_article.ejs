@@ -39,7 +39,7 @@
     
     <ul>
       <% articles.forEach(function(article, index) { %>
-        <!-- <li><a href="/articles/<%= index %>"><%= article.title %></a></li> -->
+        <!-- <li><a class="titles" href="/articles/<%= index %>"><%= article.title %></a></li> -->
        <li class="titles"><%- link_to(article.title, '/articles/' + index) %></li>
       <% }) %>
     </ul>
