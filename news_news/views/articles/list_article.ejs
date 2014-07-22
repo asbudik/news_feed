@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  	<h1>ARTICLES</h1>
+    <ul>
+      <% articles.forEach(function(article, index) { %>
+        <li><a action="/articles/" href="/articles/"><%= article.title %></a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
